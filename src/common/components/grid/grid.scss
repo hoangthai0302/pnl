@@ -1,0 +1,66 @@
+.ui-grid {
+    box-shadow: 1px 0 5px #ccc;
+    .ui-grid-cell-contents {
+        span.ui-grid-invisible {
+            display: none;
+        }
+    }
+    .watermark {
+        position: absolute;
+        top: 50%;                    
+        transform: translateY(-50%); 
+        opacity: 0.25;
+        font-size: 1.5em;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+    }
+    .loading-circular {
+        position: absolute;
+        top: calc(50% - 20px); 
+        left:50%;
+    }
+
+        
+    &.loading .ui-grid-viewport {
+        opacity: 0.5;
+    }
+
+    // .ui-grid-header-cell {
+    //     border:none;
+    // }
+
+    .ui-grid-row {
+        border-bottom: 1px solid #e0e0e0;
+        .ui-grid-cell {
+            background: white;
+    
+            .ui-grid-cell-contents {
+                display: flex;
+                align-items: center;
+                
+            }
+        }
+        &:hover {
+            background: #ccc
+        }
+    }
+
+    .ui-grid-cell-contents {
+        outline: none;
+    }
+    .ui-grid-row .ui-grid-cell.ui-grid-row-header-cell {
+        border-bottom: none;
+    }
+
+}
+
+.ui-grid-header-canvas {
+    height: 30px !important
+}
+
+.ui-grid-render-container-left {
+    .ui-grid-row .ui-grid-cell .ui-grid-cell-contents md-checkbox {
+        margin:0;
+    }
+}

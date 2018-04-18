@@ -1,0 +1,49 @@
+hmx-chip-item {
+    outline: none;
+    margin-right: 10px;
+    cursor: default;
+    &.layout-wrap {
+        flex-basis: 100%;
+    }
+}
+.hmx-chip-item {
+    height: 2.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 2px #aaa;
+    display: flex;
+    align-items: center;
+    outline: none;
+    background: white;
+    border-radius: 1.2rem;
+    .text {
+        user-select: none;
+        text-indent: 1rem;
+        padding-right: 1rem;
+        font-weight: normal;
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex-basis: auto;
+    }
+    
+    &--active {
+        background: orange;
+    }
+}
+
+.hmx-chip-buttons {
+    margin-left: -1.2rem;
+    margin-right: -.5rem;
+}
+
+.hmx-chip-button-edit md-icon{
+    font-size:1.4rem;
+    margin-top:2px;
+}
+
+
+
+.hmx-chip-button-edit + .md-icon-button.hmx-chip-button-close {
+    margin-left: -1.8rem !important;
+}

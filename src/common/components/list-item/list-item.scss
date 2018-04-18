@@ -1,0 +1,36 @@
+
+.list-item {
+    padding: 5px 0;
+    padding-left: 22px;
+    padding-right: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 0.8rem;
+    font-weight: bold;
+    .list-item-title {
+        line-height:1.6rem;
+        padding-right: 10px;
+        padding-left: 8px;
+    }
+    .number {
+        color:#666;
+    }
+    input[type=checkbox]{
+        margin-top:3px;
+    }
+    .badge {
+            margin-right: 1rem;
+            display: inline-block;
+            min-width: 2rem;
+            padding:0.1rem;
+            line-height: 1rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            background-color: #1b99f2;
+            border-radius: 10px;
+        }
+}
+

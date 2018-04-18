@@ -1,0 +1,15 @@
+<row-start-end>
+	<row>
+		<hmx-select-box data="$ctrl.languages" model="$ctrl.currentLang" on-change="$ctrl.onChange()"></hmx-select-box>
+		<input class="md-input" placeholder="Enter username" type="text">
+
+		<md-datepicker ng-model="$ctrl.myDate" md-placeholder="Enter date"></md-datepicker>
+	</row>
+
+	<row>
+		<md-button class='md-button md-raised md-warn' ng-click="$ctrl.changeState()">
+			<md-icon>mode_edit</md-icon>
+			New Request</md-button>
+	</row>
+
+</row-start-end>

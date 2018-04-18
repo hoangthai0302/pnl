@@ -1,0 +1,3 @@
+<div class="chips" layout="{{$ctrl.layout}}" layout-wrap>
+    <hmx-chip-item ng-click="$ctrl.clickItem(item)" ng-repeat="item in $ctrl.data | limitTo:$ctrl.limit track by $ctrl.getId(item) " data="item" active = "{{$ctrl.active}}" display = "{{$ctrl.display}}" closeable="$ctrl.closeable" editable="$ctrl.editable" onedit="$ctrl.editItem(item)" onclose="$ctrl._onClose(item)"></chip-item>
+</div>

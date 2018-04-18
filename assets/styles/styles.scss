@@ -1,0 +1,24 @@
+@import "~normalize-scss/sass/normalize";
+@import '~angular-material/angular-material';
+
+
+/*===========================================
+===== Loading Custom Setup of Variables =====
+=============================================*/
+@import 'typography';
+@import 'layout';
+@import 'variable';
+@import 'body';
+@import 'helper';
+@import 'materialStyle';
+@import 'input';
+
+
+
+/*===========================================
+========= Loading Customize Styles ==========
+=============================================*/
+// loading variables
+@import 'checkbox';
+
+@import 'app';

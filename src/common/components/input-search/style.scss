@@ -1,0 +1,15 @@
+input-search {
+    display: block;
+    md-icon {
+        position: absolute;
+        right:6px !important;
+        top:6px !important;
+    }
+
+    input {
+        text-indent:5px;
+    }
+    md-input-container.md-icon-right {
+        padding-right: 0px !important;
+    }
+}

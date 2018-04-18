@@ -1,0 +1,29 @@
+<div class='sidebar'>
+    <a class='logo' href='/'>
+        <img src='../../../../assets/images/logo_humax.png'>
+        <span>Profit & Loss</span>
+    </a>
+
+    <div class='sidebar-item' ng-class="{active: $ctrl.$state.includes('app.overview')}">
+        <md-icon class='sidebar-item__icon'>dashboard</md-icon>
+        <span ui-sref='app.overview'>P&L OVERVIEW</span>
+    </div>
+
+    <div class='sidebar-item' ui-sref-active="active">
+        <md-icon class='sidebar-item__icon'>swap_vert</md-icon>
+        <span ui-sref='app.tracking'>P&L TRACKING</span>
+    </div>
+    
+    <div class='sidebar-subitem' ui-sref='app.overview.review' ng-class="{active: $ctrl.$state.includes('app.overview')}">
+        Product P&L Review
+    </div>
+    <div class='sidebar-subitem' ng-class="{active: $ctrl.$state.includes('app.overview')}">
+        P&L Comparision
+    </div>
+
+    <div class='sidebar-item' ui-sref-active="active">
+        <md-icon class='sidebar-item__icon'>star</md-icon>
+        <span ui-sref='app.update'>P&L UPDATE</span>
+    </div>
+
+</div>

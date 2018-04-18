@@ -1,0 +1,11 @@
+<div class="hmx-chip-item" title="{{$ctrl.text}}" ng-class="{'hmx-chip-item--active':$ctrl.isActive}">
+    <span class="text" >{{$ctrl.text}}</span>
+    <div class="hmx-chip-buttons" ng-if="$ctrl.closeable || $ctrl.editable">
+        <md-button ng-if="$ctrl.editable" class="md-icon-button hmx-chip-button-edit"  title="Edit" ng-click="$ctrl.edit()">
+            <md-icon>edit</md-icon>
+        </md-button>
+        <md-button ng-if="$ctrl.closeable" class="md-icon-button hmx-chip-button-close" title="Remove" ng-click="$ctrl.close()">
+            <md-icon>close</md-icon>
+        </md-button>
+    </div>
+</div>

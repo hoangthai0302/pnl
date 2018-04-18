@@ -1,0 +1,95 @@
+<div class='planning padding-2em'>
+
+	<h3>Row start:</h3>
+	<row>
+		<md-button class='md-button md-raised md-primary' ng-click="$ctrl.showConfirm()">Confirm</md-button>
+		<md-button class='md-button md-raised' ng-click="$ctrl.showAlert()">Alert</md-button>
+	</row>
+	<h3>Row center:</h3>
+	<row-center>
+		<md-button class='md-button md-raised md-primary' ng-click="$ctrl.showConfirm()">Confirm</md-button>
+		<md-button class='md-button md-raised' ng-click="$ctrl.showAlert()">Alert</md-button>
+	</row-center>
+
+	<h3>Row end:</h3>
+	<row-end>
+		<md-button class='md-button md-raised md-primary' ng-click="$ctrl.showConfirm()">Confirm</md-button>
+		<md-button class='md-button md-raised' ng-click="$ctrl.showAlert()">Alert</md-button>
+	</row-end>
+	<br/>
+
+	<h3>Equal columns:</h3>
+	<row>
+		<column flex="20">
+			<label>Product Code</label>
+			<hmx-select-box model="$ctrl.user" placeholder="Type or search" data="$ctrl.users" on-open="$ctrl.loadUsers()" path="name"></hmx-select-box>
+		</column>
+		<column>
+			<label>Product Code</label>
+			<input class="md-input" placeholder="Username">
+		</column>
+
+		<column>
+			<label>Customer</label>
+			<md-autocomplete md-selected-item="$ctrl.selectedItem" md-min-length="0" md-item-text="item.name" placeholder="Type or search"
+			    md-search-text="searchText" md-items="item in $ctrl.searchUsers(searchText)">
+				<md-item-template>
+					<span md-highlight-text="searchText">{{item.name}}</span>
+				</md-item-template>
+			</md-autocomplete>
+		</column>
+	</row>
+
+	<row>
+		<column>Test</column>
+		<column>Test2</column>
+		<column>Test3</column>
+	</row>
+
+	<row>
+		<column>
+			<label>Product Code</label>
+			<input class="md-input" placeholder="Username">
+		</column>
+
+		<column>
+			<label>Customer</label>
+			<md-autocomplete md-selected-item="$ctrl.selectedItem" md-min-length="0" md-item-text="item.name" placeholder="Type or search"
+			    md-search-text="searchText" md-items="item in $ctrl.searchUsers(searchText)">
+				<md-item-template>
+					<span md-highlight-text="searchText">{{item.name}}</span>
+				</md-item-template>
+			</md-autocomplete>
+		</column>
+	</row>
+
+
+	<br/>
+	<md-datepicker ng-model="$ctrl.myDate" md-placeholder="Type or search"></md-datepicker>
+
+	<br/>
+	<md-checkbox class="md-primary" ng-model="$ctrl.cb1" aria-label="Checkbox 1">Test</md-checkbox>
+
+	<hmx-chips data="$ctrl.data" display="name" closeable="true" active="active" on-item-click="$ctrl.toggleActive(item)"></hmx-chips>
+	<row>
+		<md-button class='md-raised' ng-click="$ctrl.addChip()">Add item</md-button>
+	</row>
+	<br/>
+
+	<row>
+		<column flex="noshrink">
+			<h3>Test</h3>
+		</column>
+		<column>
+			<hmx-grid options="$ctrl.gridOptions" class="find-select-grid" selected-rows="$ctrl.selectedRows"></hmx-grid>
+		</column>
+
+	</row>
+	<column>
+		<hmx-colchart options="$ctrl.chartOptions">Placeholder for highcharts</hmx-colchart>
+	</column>
+	<hmx-colchart options="$ctrl.chartOptions2">Placeholder for highcharts</hmx-colchart>
+
+	<hmx-piechart options="$ctrl.piechartOptions"></hmx-piechart>
+
+</div>

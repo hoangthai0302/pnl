@@ -1,0 +1,9 @@
+    <div class='wrap-frame'>
+        <iframe  ng-src="{{$ctrl.src}}" border="0" cellspacing="0" width="{{$ctrl.width}}" height="{{$ctrl.height}}"
+        style="border-style: none;" name="MainFrame" id="MainFrame" scrolling="YES">
+        </iframe>
+        
+        <div ng-show="$ctrl.showLoading" class='wrap-frame__backdrop'>
+            <md-progress-circular ng-if="$ctrl.showLoading" class='wrap-frame__backdrop__spinner' md-diameter="20px"></md-progress-circular>
+        </div>
+    </div>  

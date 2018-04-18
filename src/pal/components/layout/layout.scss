@@ -1,0 +1,28 @@
+
+
+layout {
+	height: 100vh;
+	width: 100%;
+}
+
+.sidebar {
+    background-color: #2C304B;
+    float:left;
+    height: 100%;
+}
+
+.content {
+	flex-grow: 1;
+}
+
+.content-header {
+    background-color: #ccc;
+    height: 60px;
+}
+
+.content-main {
+    overflow:hidden;
+    position: relative;
+    height: calc(100% - 60px);
+}
+
