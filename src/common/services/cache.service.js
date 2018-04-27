@@ -1,7 +1,7 @@
 class CacheService {
     /* @ngInject */ 
-    constructor($q, CacheFactory) {
-        Object.assign(this, { $q, CacheFactory });
+    constructor($q, $cacheFactory) {
+        Object.assign(this, { $q, $cacheFactory });
         this.memoryCache = null;
         this.storageCache = null;
     }
@@ -10,8 +10,8 @@ class CacheService {
     getMemoryCache(minute) {
         minute = minute || 30;
         var cacheName = 'memoryCache_' + minute;
-        if (!this.CacheFactory.get(cacheName)) {
-            this.memoryCache = this.CacheFactory(cacheName, {
+        if (!this.$cacheFactory.get(cacheName)) {
+            this.memoryCache = this.$cacheFactory(cacheName, {
                 storageMode: 'memory',
                 deleteOnExpire: 'aggressive',
                 maxAge: 60 * 1000 * minute
@@ -23,8 +23,8 @@ class CacheService {
     getStorageCache(minute) {
         minute = minute || 30;
         var cacheName = 'storageCache_' + minute;
-        if (!CacheFactory.get(cacheName)) {
-            this.storageCache = this.CacheFactory(cacheName, {
+        if (!$cacheFactory.get(cacheName)) {
+            this.storageCache = this.$cacheFactory(cacheName, {
                 storageMode: 'localStorage',
                 deleteOnExpire: 'aggressive',
                 maxAge: 60 * 1000 * minute

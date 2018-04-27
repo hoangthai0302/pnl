@@ -1,15 +1,28 @@
 .md-input {
-    border: none;
+    border:1px solid #DCDFF9;
     border-radius: 5px;
     outline: none;
     line-height: 3rem;
     height: 3rem;
     margin:.5em 0;
     text-indent: 1em;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); 
+    //box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); 
     &::placeholder {
         color:#888;
         font-size: 1em;
+        font-style: italic;
     }
 
+}
+
+.md-button.md-green {
+    background: rgba(79, 195, 133, 1);
+    color:white;
+    &>md-icon {
+        color:white;
+    }
+
+}
+.md-button.md-green:not([disabled]):hover {
+    background: rgba(79, 195, 133, .9)
 }

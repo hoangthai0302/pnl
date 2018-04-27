@@ -2,14 +2,14 @@ import angular from 'angular';
 
 import Layout from './layout/layout';
 import Sidebar from './sidebar/sidebar'
-import Header from './common/header'
+import Common from './common'
 import Planning from './planning/planning'
 import tracking from './tracking/tracking'
 import update from './update/update'
 
 
 export default angular.module('pal.components', [
-    Header
+    Common
 ])
 .component('layout', Layout)
 .component('sidebar', Sidebar)

@@ -26,7 +26,7 @@ const appModule = angular
         'pascalprecht.translate',
         
         HmxCommon,
-        Pal,
+        Pal
         
 	])
     .config(AppConfig)

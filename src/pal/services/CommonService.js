@@ -1,21 +1,20 @@
 class CommonService {
 	/* @ngInject */
-	constructor(ApiService, appConfig, CacheService, Util, $q) {
+	constructor(ApiService, appConfig, CacheService, $q) {
 		this.api = ApiService;
-		this.path = 'WebService/CommonService.asmx/';
+		this.path = 'GPWeb/WebService/MarketingZone/CommonService.asmx/';
 		Object.assign(this, {			
 			appConfig,
 			CacheService,
-			Util,
 			$q
 		})
 	}
 
 	loadCodeList(masterCode, defaultOptionText) {
-		var cacheKey = this.CacheService.buildCacheKey('loadCodeList', masterCode, defaultOptionText);
+		var cacheKey = this.CacheService.buildCacheKey('LoadCodeList', masterCode, defaultOptionText);
 		return this.CacheService.getQMemory(cacheKey).then(valueCached => {
 			if (!valueCached) {
-				return this.api.post(this.path + 'loadCodeList', {
+				return this.api.post(this.path + 'LoadCodeList', {
 					masterCode
 				}).then(codeList => {
 					if (defaultOptionText) {
@@ -52,3 +51,5 @@ class CommonService {
 	}
 
 }
+
+export default CommonService;

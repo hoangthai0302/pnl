@@ -64,7 +64,6 @@ export default {
                         length = Math.min(length, maxRow);
 
                         let height = length * this.options.rowHeight;
-                        console.log(length)
                         if(mainGrid) {
                             mainGrid.style.height = height + 30 + 10;
                             mainGrid.style.overflow = 'hidden';

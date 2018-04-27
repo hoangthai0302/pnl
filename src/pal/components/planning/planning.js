@@ -4,7 +4,7 @@ export default {
 	template: template,
 	controller: class Controller {
 		/* @ngInject */
-		constructor($log, DialogService, $timeout, $q, $state, $element, uiGridConstants) {
+		constructor($log, DialogService, $timeout, $q, $state, $element, uiGridConstants, CommonService) {
 			Object.assign(this, {
 				$log,
 				DialogService,
@@ -12,12 +12,16 @@ export default {
 				$state,
 				$q,
 				$element,
-				uiGridConstants
+                uiGridConstants,
+                CommonService
 			})
 
 		}
 
 		$onInit() {
+            this.CommonService.getUserMenu().then((res)=>{
+                console.log(res);
+            })
 			this.data = [{
 					id: 1,
 					name: 'Scooby Doo',
@@ -187,7 +191,46 @@ export default {
 
 		toggleActive(item) {
 			item.active = !item.active;
-		}
+        }
+        
+        generateScheduleChart(){
+            let totalItem = 5000;
+            const data = [];
+            for (let i = 0; i < totalItem; i++) {
+                let childCount = Math.floor(Math.random() * 3) + 1;
+                let item = {
+                    name: Math.random().toString(36).substr(2, 16),
+                    children: []
+                }
+                for (let j = 0; j < childCount; j++) {
+
+                    let dateObj = randomDate(new Date(2012, 4, 1), new Date());
+                    
+
+                    //step duration in days
+                    let step1 = Math.floor(Math.random() * 120) + 14;
+                    let step2 = Math.floor(Math.random() * 120) + 14;
+                    let step3 = Math.floor(Math.random() * 120) + 14;
+                    
+
+                    item.children.push({
+                        name: Math.random().toString(36).substr(2, 16),
+                        start: dateObj,
+                        steps: [ step1, step2, step3 ]
+                    })
+
+                    
+                }
+                data.push(item);
+
+            }
+
+            function randomDate(start, end) {
+                return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+            }
+            
+            this.scheduleData =  data;
+        }
 
 		searchUsers(text) {
 

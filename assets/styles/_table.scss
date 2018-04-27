@@ -1,0 +1,44 @@
+.table {
+    width: 100%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    tr td,
+    tr th {
+        border: 1px solid rgb(212, 212, 212);
+        border-top: 0;
+        vertical-align: top;
+        padding: .75rem;
+    }
+    tr:first-child {
+        border-top: 1px solid #ddd;
+    }
+    th,
+    td.active {
+        font-weight: bold;
+        background: #f3f3f3;
+    }
+    &.fixed-header {
+        display: block;
+        tbody {
+            display: block;
+            overflow-x: hidden;
+            tr:first-child {
+                border-top: 0;
+            }
+        }
+        th:last-child {
+            width: 0px;
+            display: none;
+            border-left: none;
+        }
+        th:nth-last-child(2) {
+            border-right: none;
+        }
+        tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+    }
+}
